@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+build/
+dist/
+
+Logs/
+Trades/
+Daily Backups/
+LagProbeLogs/
+
+.backup_planned_changes.txt
+
+*.log
+*.tmp
+*.bak
+
+github_token.txt
+

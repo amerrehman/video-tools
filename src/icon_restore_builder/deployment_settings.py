@@ -1,0 +1,6 @@
+﻿DEFAULT_UPDATE_MANIFEST_URL = "https://amerrehman.github.io/video-tools/latest.json"
+DEFAULT_GITHUB_RELEASE_DIR = "release"
+DEFAULT_GITHUB_UPDATES_REPO = "amerrehman/video-tools"
+DEFAULT_GITHUB_UPDATES_BRANCH = "main"
+DEFAULT_GITHUB_TOKEN_ENV_VAR = "VIDEO_TOOLS_GITHUB_TOKEN"
+DEFAULT_RELEASE_DOWNLOAD_BASE_URL = "https://amerrehman.github.io/video-tools/release"

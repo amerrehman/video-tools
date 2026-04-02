@@ -1,0 +1,1 @@
+"""Folder Restorer application package."""
