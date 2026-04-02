@@ -1,8 +1,15 @@
 ﻿param(
     [Parameter(ValueFromRemainingArguments = $true)]
-    [object[]]$ForwardArgs
+    [string[]]$SummaryParts,
+
+    [switch]$Clear
 )
 
 $scriptPath = Join-Path $PSScriptRoot 'scripts\backup_planned_changes.ps1'
-& $scriptPath @ForwardArgs
+$invokeArgs = @{}
+
+if ($SummaryParts) { $invokeArgs.SummaryParts = $SummaryParts }
+if ($Clear) { $invokeArgs.Clear = $true }
+
+& $scriptPath @invokeArgs
 exit $LASTEXITCODE
