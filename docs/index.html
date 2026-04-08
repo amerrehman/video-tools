@@ -147,7 +147,7 @@
         Folder Restorer, Folder Sync, Video Encoder, and the built-in Premiere auto-minimize helper.
       </p>
       <div class="actions">
-        <a class="btn btn-primary" href="https://raw.githubusercontent.com/amerrehman/video-tools/main/release/downloads/VideoToolsSetup.exe">Download Setup</a>
+        <a class="btn btn-primary" id="download-setup-link" href="#">Download Setup</a>
         <a class="btn btn-secondary" href="/video-tools/help/">Open Help Page</a>
       </div>
     </section>
@@ -162,7 +162,7 @@
           </div>
           <div class="card">
             <span class="label">Installer</span>
-            <div class="value">VideoToolsSetup.exe</div>
+            <div class="value" id="installer-name">Loading...</div>
           </div>
           <div class="card">
             <span class="label">Help Route</span>
@@ -195,11 +195,15 @@
       const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
       const heading = lines[0] || "Video Editing Tools Latest";
       const versionMatch = heading.match(/Video Editing Tools\s+(.+)/i);
+      const versionText = versionMatch ? versionMatch[1].trim() : "";
+      const setupName = versionText ? `VideoEdittingTools${versionText}.exe` : "VideoEdittingTools.exe";
       const noteLines = lines.filter((line) => !/^Video Editing Tools\s+/i.test(line) && !/^Summary of changes$/i.test(line))
         .map((line) => line.replace(/^-+\s*/, "").trim())
         .filter(Boolean);
 
-      document.getElementById("release-version").textContent = versionMatch ? versionMatch[1].trim() : "Latest";
+      document.getElementById("release-version").textContent = versionText || "Latest";
+      document.getElementById("installer-name").textContent = setupName;
+      document.getElementById("download-setup-link").href = `https://raw.githubusercontent.com/amerrehman/video-tools/main/release/downloads/${setupName}`;
       const list = document.getElementById("release-notes");
       list.innerHTML = "";
       (noteLines.length ? noteLines : ["Latest setup release is ready to download."]).forEach((line) => {
@@ -211,6 +215,8 @@
 
     loadReleaseNotes().catch(() => {
       document.getElementById("release-version").textContent = "Latest";
+      document.getElementById("installer-name").textContent = "VideoEdittingTools.exe";
+      document.getElementById("download-setup-link").href = "https://raw.githubusercontent.com/amerrehman/video-tools/main/release/downloads/VideoEdittingTools.exe";
       document.getElementById("release-notes").innerHTML = "<li>Current release notes could not be loaded.</li>";
     });
   </script>
