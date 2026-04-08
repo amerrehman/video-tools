@@ -1,12 +1,265 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Video Tools Releases</title>
+  <title>Video Tools Help</title>
+  <meta name="description" content="Video Tools help guide for the launcher, included utilities, and setup workflow.">
+  <style>
+    :root {
+      --bg: #091117;
+      --panel: rgba(17, 32, 39, 0.92);
+      --panel-soft: rgba(22, 43, 53, 0.92);
+      --border: rgba(110, 197, 236, 0.18);
+      --text: #eef7fa;
+      --muted: #9cb5bf;
+      --accent: #6ec5ec;
+      --accent-soft: #d7f3ff;
+      --shadow: 0 26px 60px rgba(0, 0, 0, 0.34);
+      --radius-lg: 24px;
+      --radius-md: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      background:
+        radial-gradient(circle at top left, rgba(110, 197, 236, 0.14), transparent 28%),
+        radial-gradient(circle at top right, rgba(133, 255, 212, 0.08), transparent 22%),
+        linear-gradient(180deg, #091117 0%, #0d1b22 100%);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code {
+      font-family: Consolas, "SFMono-Regular", monospace;
+      font-size: 0.93em;
+      background: rgba(110, 197, 236, 0.1);
+      color: var(--accent-soft);
+      padding: 0.14rem 0.4rem;
+      border-radius: 999px;
+    }
+    .shell {
+      width: min(calc(100% - 32px), 1120px);
+      margin: 0 auto;
+      padding: 34px 0 48px;
+    }
+    .hero, .nav, .section {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+    .hero { padding: 34px; }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(110, 197, 236, 0.1);
+      border: 1px solid rgba(110, 197, 236, 0.22);
+      color: var(--accent-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+    }
+    h1, h2, h3 { margin: 0 0 12px; line-height: 1.1; }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); letter-spacing: -0.04em; max-width: 10ch; }
+    h2 { font-size: clamp(1.45rem, 2.5vw, 2.1rem); letter-spacing: -0.03em; }
+    h3 { font-size: 1.05rem; }
+    p { margin: 0 0 14px; color: var(--muted); }
+    .lead { max-width: 64ch; font-size: 1.02rem; margin-top: 14px; }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      font-weight: 700;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #9be0ff);
+      color: #04212c;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .btn-secondary {
+      background: rgba(110, 197, 236, 0.08);
+      color: var(--text);
+      border-color: rgba(110, 197, 236, 0.22);
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 20px;
+      margin-top: 22px;
+    }
+    .nav {
+      position: sticky;
+      top: 20px;
+      align-self: start;
+      padding: 18px;
+    }
+    .nav a {
+      display: block;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      color: var(--muted);
+      background: rgba(110, 197, 236, 0.05);
+    }
+    .nav a:hover {
+      color: var(--text);
+      text-decoration: none;
+      background: rgba(110, 197, 236, 0.1);
+    }
+    .content {
+      display: grid;
+      gap: 20px;
+    }
+    .section {
+      padding: 26px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--panel-soft);
+      padding: 18px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    li { margin-bottom: 8px; }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .nav { position: static; }
+      .shell { width: min(calc(100% - 20px), 1120px); }
+      .hero, .section, .nav { padding: 22px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Video Tools</h1>
-  <p>This repository hosts versioned release artifacts for the Icon Restore utility.</p>
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Help Center</span>
+      <h1>Video Tools</h1>
+      <p class="lead">
+        This launcher bundles a few Windows utilities into one starting point. Use this page to understand what each tool does,
+        where the installer comes from, and what to check if a launch fails.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/video-tools/">Back to Downloads</a>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/amerrehman/video-tools/main/release/downloads/VideoToolsSetup.exe">Download Setup</a>
+      </div>
+    </section>
+
+    <section class="layout">
+      <nav class="nav">
+        <h2>On This Page</h2>
+        <a href="#overview">Launcher Overview</a>
+        <a href="#tools">Included Tools</a>
+        <a href="#premiere">Premiere Auto-Minimize</a>
+        <a href="#install">Install Notes</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+      </nav>
+
+      <div class="content">
+        <section class="section" id="overview">
+          <h2>Launcher Overview</h2>
+          <p>
+            The main <code>Video Tools</code> window acts like a dashboard. Each button starts the original script for that tool in
+            its own working folder, so the launcher itself stays simple while the individual tools keep their own logic.
+          </p>
+          <div class="cards">
+            <article class="card">
+              <h3>One Window</h3>
+              <p>Open the utility you need without browsing around different folders or scripts.</p>
+            </article>
+            <article class="card">
+              <h3>Windows Focused</h3>
+              <p>The launcher and bundled helpers are built around the Windows environment and Explorer workflow.</p>
+            </article>
+            <article class="card">
+              <h3>Separate Scripts</h3>
+              <p>Each button launches the original script or packaged tool instead of duplicating the tool logic inside the launcher.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="tools">
+          <h2>Included Tools</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Folder Restorer</h3>
+              <p>Repairs normal folder icons by removing custom icon overrides and refreshing Windows Explorer.</p>
+            </article>
+            <article class="card">
+              <h3>Video Encoder</h3>
+              <p>Launches the external encoder workflow so video files can be converted into a format that behaves better across apps and devices.</p>
+            </article>
+            <article class="card">
+              <h3>Folder Sync</h3>
+              <p>Copies only new or changed files from a source folder into a target folder while leaving unrelated target files alone.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="premiere">
+          <h2>Premiere Auto-Minimize</h2>
+          <p>
+            The launcher starts a Premiere auto-minimize controller when the window opens. Its status text updates live, and the toggle
+            button lets you pause or resume that behavior without leaving the launcher.
+          </p>
+          <ul>
+            <li>Use the built-in toggle button if you want the helper temporarily paused.</li>
+            <li>The status message in the launcher tells you whether it is active and which hotkey label is currently configured.</li>
+            <li>If Premiere-specific automation is not needed, you can leave the launcher open and ignore that panel.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="install">
+          <h2>Install Notes</h2>
+          <p>
+            The published installer is <code>VideoToolsSetup.exe</code>. It installs the launcher and the packaged utilities into a
+            per-user location under <code>{localappdata}\Video Tools</code> by default, which avoids the extra friction of requiring
+            machine-wide admin access for normal installs.
+          </p>
+          <ul>
+            <li>Download the installer from the release page at <code>/video-tools/</code>.</li>
+            <li>Run the setup and keep the default location unless you have a reason to change it.</li>
+            <li>After install, open Video Tools and launch the utility you need from the dashboard.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="troubleshooting">
+          <h2>Troubleshooting</h2>
+          <ul>
+            <li>If a launch button reports that a script is missing, reinstall with the latest <code>setup.exe</code>.</li>
+            <li>If Folder Sync or Folder Restorer fails unexpectedly, try closing Windows Explorer-heavy workflows and reopening the app.</li>
+            <li>If the Video Encoder button does nothing, the external encoder script path may not be available on that machine.</li>
+            <li>If you are reviewing a release online, return to the downloads page to compare the current installer and release notes.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
