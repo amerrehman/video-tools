@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Video Tools Downloads</title>
-  <meta name="description" content="Download the latest Video Tools setup.exe and review the current release notes.">
+  <title>Video Editing Tools Downloads</title>
+  <meta name="description" content="Download the latest Video Editing Tools setup.exe and review the current release notes.">
   <style>
     :root {
       --bg: #081319;
@@ -141,9 +141,9 @@
   <main class="shell">
     <section class="hero">
       <span class="eyebrow">Windows Utility Bundle</span>
-      <h1>Video Tools</h1>
+      <h1>Video Editing Tools</h1>
       <p class="lead">
-        Download the latest <code>setup.exe</code> for the Video Tools launcher. This package gives you one place to open
+        Download the latest <code>setup.exe</code> for the Video Editing Tools launcher. This package gives you one place to open
         Folder Restorer, Folder Sync, Video Encoder, and the built-in Premiere auto-minimize helper.
       </p>
       <div class="actions">
@@ -193,9 +193,9 @@
 
       const text = (await response.text()).trim();
       const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
-      const heading = lines[0] || "Video Tools Latest";
-      const versionMatch = heading.match(/Video Tools\s+(.+)/i);
-      const noteLines = lines.filter((line) => !/^Video Tools\s+/i.test(line) && !/^Summary of changes$/i.test(line))
+      const heading = lines[0] || "Video Editing Tools Latest";
+      const versionMatch = heading.match(/Video Editing Tools\s+(.+)/i);
+      const noteLines = lines.filter((line) => !/^Video Editing Tools\s+/i.test(line) && !/^Summary of changes$/i.test(line))
         .map((line) => line.replace(/^-+\s*/, "").trim())
         .filter(Boolean);
 
