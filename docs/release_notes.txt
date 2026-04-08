@@ -1,4 +1,4 @@
-Video Tools 1.00.09
+Video Editing Tools 1.00.09
 
 Summary of changes
 - Your release notes here
