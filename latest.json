@@ -5,7 +5,12 @@
   "branch": "main",
   "downloads": {
     "exe_name": "Video Tools.exe",
-    "relative_path": "release/1.00.10/Video Tools.exe",
-    "download_url": "https://amerrehman.github.io/video-tools/release/1.00.10/Video%20Tools.exe"
+    "relative_path": "release/versions/1.00.10/Video Tools.exe",
+    "download_url": "https://amerrehman.github.io/video-tools/release/versions/1.00.10/Video%20Tools.exe"
+  },
+  "setup": {
+    "exe_name": "VideoEdittingTools1.00.10.exe",
+    "relative_path": "release/downloads/VideoEdittingTools1.00.10.exe",
+    "download_url": "https://amerrehman.github.io/video-tools/release/downloads/VideoEdittingTools1.00.10.exe"
   }
 }
