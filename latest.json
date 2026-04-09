@@ -1,16 +1,16 @@
 {
-  "version": "1.00.16",
-  "release_notes": "Version 1.00.16:\n- Your release notes here",
+  "version": "1.00.17",
+  "release_notes": "Version 1.00.17:\n- Your release notes here",
   "repo": "amerrehman/video-tools",
   "branch": "main",
   "downloads": {
     "exe_name": "Video Tools.exe",
-    "relative_path": "release/versions/1.00.16/Video Tools.exe",
-    "download_url": "https://amerrehman.github.io/video-tools/release/versions/1.00.16/Video%20Tools.exe"
+    "relative_path": "release/versions/1.00.17/Video Tools.exe",
+    "download_url": "https://amerrehman.github.io/video-tools/release/versions/1.00.17/Video%20Tools.exe"
   },
   "setup": {
-    "exe_name": "VideoEdittingTools1.00.16.exe",
-    "relative_path": "release/downloads/VideoEdittingTools1.00.16.exe",
-    "download_url": "https://amerrehman.github.io/video-tools/release/downloads/VideoEdittingTools1.00.16.exe"
+    "exe_name": "VideoEdittingTools1.00.17.exe",
+    "relative_path": "release/downloads/VideoEdittingTools1.00.17.exe",
+    "download_url": "https://amerrehman.github.io/video-tools/release/downloads/VideoEdittingTools1.00.17.exe"
   }
 }
