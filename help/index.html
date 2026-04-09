@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Video Tools by Editopia Help</title>
-  <meta name="description" content="Video Tools by Editopia help guide for the launcher, included utilities, and setup workflow.">
+  <title>Video Editing Tools by Editopia Help</title>
+  <meta name="description" content="Video Editing Tools by Editopia help guide for the launcher, included utilities, and setup workflow.">
   <style>
     :root {
       --bg: #091117;
@@ -160,7 +160,7 @@
   <main class="shell">
     <section class="hero">
       <span class="eyebrow">Help Center</span>
-      <h1>Video Tools by Editopia</h1>
+      <h1>Video Editing Tools by Editopia</h1>
       <p class="lead">
         This launcher bundles a few Windows utilities into one starting point. Use this page to understand what each tool does,
         where the installer comes from, and what to check if a launch fails.
@@ -185,7 +185,7 @@
         <section class="section" id="overview">
           <h2>Launcher Overview</h2>
           <p>
-            The main <code>Video Tools by Editopia</code> window acts like a dashboard. Each button starts the original script for that tool in
+            The main <code>Video Editing Tools by Editopia</code> window acts like a dashboard. Each button starts the original script for that tool in
             its own working folder, so the launcher itself stays simple while the individual tools keep their own logic.
           </p>
           <div class="cards">
@@ -245,7 +245,7 @@
           <ul>
             <li>Download the installer from the release page at <code>/video-tools/</code>.</li>
             <li>Run the setup and keep the default location unless you have a reason to change it.</li>
-            <li>After install, open Video Tools by Editopia and launch the utility you need from the dashboard.</li>
+            <li>After install, open Video Editing Tools by Editopia and launch the utility you need from the dashboard.</li>
           </ul>
         </section>
 
@@ -268,7 +268,7 @@
 
       const text = (await response.text()).trim();
       const heading = text.split(/\r?\n/).map((line) => line.trim()).find(Boolean) || "";
-      const versionMatch = heading.match(/(?:Video Tools by Editopia|Video Editing Tools)\s+(.+)/i);
+      const versionMatch = heading.match(/(?:Video Editing Tools by Editopia|Video Tools by Editopia|Video Editing Tools)\s+(.+)/i);
       const versionText = versionMatch ? versionMatch[1].trim() : "";
       const setupName = versionText ? `VideoEdittingTools${versionText}.exe` : "VideoEdittingTools.exe";
 
