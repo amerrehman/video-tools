@@ -44,9 +44,9 @@
       border-radius: 999px;
     }
     .shell {
-      width: min(calc(100% - 28px), 960px);
+      width: min(calc(100% - 32px), 1020px);
       margin: 0 auto;
-      padding: 16px 0 28px;
+      padding: 22px 0 36px;
     }
     .hero, .nav, .section {
       border: 1px solid var(--border);
@@ -54,7 +54,7 @@
       background: var(--panel);
       box-shadow: var(--shadow);
     }
-    .hero { padding: 20px; }
+    .hero { padding: 26px; }
     .eyebrow {
       display: inline-block;
       padding: 6px 12px;
@@ -64,30 +64,30 @@
       color: var(--accent-soft);
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      font-size: 0.66rem;
+      font-size: 0.72rem;
     }
     h1, h2, h3 { margin: 0 0 12px; line-height: 1.1; }
-    h1 { font-size: clamp(1.45rem, 3.2vw, 2.15rem); letter-spacing: -0.025em; max-width: 14ch; }
-    h2 { font-size: clamp(0.96rem, 1.4vw, 1.18rem); letter-spacing: -0.01em; }
-    h3 { font-size: 0.82rem; }
+    h1 { font-size: clamp(1.9rem, 4.1vw, 2.9rem); letter-spacing: -0.03em; max-width: 12ch; }
+    h2 { font-size: clamp(1.14rem, 1.8vw, 1.45rem); letter-spacing: -0.018em; }
+    h3 { font-size: 0.96rem; }
     p { margin: 0 0 14px; color: var(--muted); }
-    .lead { max-width: 64ch; font-size: 0.8rem; margin-top: 8px; }
+    .lead { max-width: 64ch; font-size: 0.92rem; margin-top: 12px; }
     .actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
+      gap: 10px;
+      margin-top: 18px;
     }
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 32px;
-      padding: 0 12px;
-      border-radius: 9px;
+      min-height: 38px;
+      padding: 0 16px;
+      border-radius: 12px;
       border: 1px solid transparent;
       font-weight: 600;
-      font-size: 0.78rem;
+      font-size: 0.9rem;
     }
     .btn-primary {
       background: linear-gradient(135deg, var(--accent), #9be0ff);
@@ -102,14 +102,14 @@
     .layout {
       display: grid;
       grid-template-columns: 280px minmax(0, 1fr);
-      gap: 14px;
-      margin-top: 14px;
+      gap: 18px;
+      margin-top: 20px;
     }
     .nav {
       position: sticky;
       top: 20px;
       align-self: start;
-      padding: 12px;
+      padding: 16px;
     }
     .nav a {
       display: block;
@@ -129,25 +129,25 @@
       gap: 20px;
     }
     .section {
-      padding: 15px;
+      padding: 20px;
     }
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 10px;
-      margin-top: 12px;
+      gap: 14px;
+      margin-top: 16px;
     }
     .card {
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
       background: var(--panel-soft);
-      padding: 12px;
+      padding: 16px;
     }
     ul {
       margin: 0;
       padding-left: 18px;
       color: var(--muted);
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
     li { margin-bottom: 8px; }
     @media (max-width: 900px) {
