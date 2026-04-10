@@ -1,4 +1,4 @@
-Video Editing Tools by Editopia 1.00.39
+Video Editing Tools by Editopia 1.00.42
 
 Summary of changes
 - Your release notes here
