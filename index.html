@@ -198,7 +198,7 @@
       const heading = lines[0] || "Video Editing Tools by Editopia Latest";
       const versionMatch = heading.match(/(?:Video Editing Tools by Editopia|Video Tools by Editopia|Video Editing Tools)\s+(.+)/i);
       const versionText = versionMatch ? versionMatch[1].trim() : "";
-      const setupName = versionText ? `VideoEdittingTools${versionText}.exe` : "VideoEdittingTools.exe";
+      const setupName = versionText ? `VideoEditingTools${versionText}.exe` : "VideoEditingTools.exe";
       const noteLines = lines.filter((line) => !/^(?:Video Editing Tools by Editopia|Video Tools by Editopia|Video Editing Tools)\s+/i.test(line) && !/^Summary of changes$/i.test(line))
         .map((line) => line.replace(/^-+\s*/, "").trim())
         .filter(Boolean);
@@ -217,8 +217,8 @@
 
     loadReleaseNotes().catch(() => {
       document.getElementById("release-version").textContent = "Latest";
-      document.getElementById("installer-name").textContent = "VideoEdittingTools.exe";
-      document.getElementById("download-setup-link").href = "https://raw.githubusercontent.com/amerrehman/video-tools/main/release/downloads/VideoEdittingTools.exe";
+      document.getElementById("installer-name").textContent = "VideoEditingTools.exe";
+      document.getElementById("download-setup-link").href = "https://raw.githubusercontent.com/amerrehman/video-tools/main/release/downloads/VideoEditingTools.exe";
       document.getElementById("release-notes").innerHTML = "<li>Current release notes could not be loaded.</li>";
     });
   </script>
