@@ -240,7 +240,7 @@
         <section class="section" id="install">
           <h2>Install Notes</h2>
           <p>
-            The published installer is <code id="installer-name">VideoEdittingTools.exe</code>. It installs the launcher and the packaged utilities into a
+            The published installer is <code id="installer-name">VideoEditingTools.exe</code>. It installs the launcher and the packaged utilities into a
             per-user location under <code>{localappdata}</code> by default, which avoids the extra friction of requiring
             machine-wide admin access for normal installs.
           </p>
@@ -272,15 +272,15 @@
       const heading = text.split(/\r?\n/).map((line) => line.trim()).find(Boolean) || "";
       const versionMatch = heading.match(/(?:Video Editing Tools by Editopia|Video Tools by Editopia|Video Editing Tools)\s+(.+)/i);
       const versionText = versionMatch ? versionMatch[1].trim() : "";
-      const setupName = versionText ? `VideoEdittingTools${versionText}.exe` : "VideoEdittingTools.exe";
+      const setupName = versionText ? `VideoEditingTools${versionText}.exe` : "VideoEditingTools.exe";
 
       document.getElementById("installer-name").textContent = setupName;
       document.getElementById("download-setup-link").href = `https://raw.githubusercontent.com/amerrehman/video-tools/main/release/downloads/${setupName}`;
     }
 
     loadSetupFilename().catch(() => {
-      document.getElementById("installer-name").textContent = "VideoEdittingTools.exe";
-      document.getElementById("download-setup-link").href = "https://raw.githubusercontent.com/amerrehman/video-tools/main/release/downloads/VideoEdittingTools.exe";
+      document.getElementById("installer-name").textContent = "VideoEditingTools.exe";
+      document.getElementById("download-setup-link").href = "https://raw.githubusercontent.com/amerrehman/video-tools/main/release/downloads/VideoEditingTools.exe";
     });
   </script>
 </body>
